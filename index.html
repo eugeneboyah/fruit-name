@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>My beloved fruit</title>
+
+	<style type="text/css">
+		
+		*{
+			font-family: Trebuchet MS;
+			}
+
+			#fruit-form{
+			
+			display: flex;
+			
+			padding: 10px;
+			align-items: center;
+			margin: 10px;
+			background-color: grey;
+			
+			
+		}
+
+		#fruit-list{
+			
+			
+			padding: 10px;
+			background-color: blue;
+		
+		
+			
+		}
+
+
+
+	</style>
+</head>
+<body>
+	<main>
+		<header id="fruit-form">
+
+			<input id="fruit-name"  placeholder="Enter fruit name">
+
+			<button onclick="addFruit()"> Add Fruit</button>
+
+		</header>
+		<section id="fruit">
+			<ul id="fruit-list">
+				<li>Mango</li>
+				
+			</ul>
+			
+
+		</section>
+
+		<script type="text/javascript">
+			function addFruit()
+			{
+				// Get fruit name
+				let fruit_name = document.getElementById("fruit-name").value
+
+				// Get unordered (u) list element
+				let unordered_list = document.getElementById("fruit-list")
+
+				let list_element=document.createElement("li")
+
+				list_element.innerText=fruit_name
+
+				unordered_list.appendChild(list_element)
+			}
+		</script>
+	</main>
+
+</body>
+</html>
